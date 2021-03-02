@@ -1,6 +1,7 @@
-import React, {Component,useEffect} from 'react';
+import React, {Component,createRef} from 'react';
 import ReactDOM from 'react-dom';
 import * as d3 from'd3';
+import './style/styles.css';
 import {entities,associationPair,optionalExclusiveContainmentPair,exclusiveContainmentPair,weakInclusiveContainmentPair,strongInclusiveContainmentPair} from './data/OpenShip1.json';
 import Marker from './components/marker.js';
 import Container from './components/container.js';
@@ -25,9 +26,15 @@ class App extends Component {
             links:[],
             modal_open:false,
             title:"Business Entity Data Model: FedEx OpenShipping Service",
-            nodes:entities
+            nodes:entities,
+            container:createRef(),
+            zoom:d3.behavior.zoom().scaleExtent([1, 1]).on("zoom", this.zoom),
+            noZoom:d3.behavior.zoom().scaleExtent([1,1]).on("zoom", null)
         }  
 
+    }
+    zoom() {
+        this.state.container.attr("transform", "translate(" + d3.event.translate + ")");
     }
     
     componentWillMount(){
@@ -40,7 +47,6 @@ class App extends Component {
         this.setState({
             links:l
         },()=>{
-            console.log(this.state.links);
         });
         
         this.setState({ 
@@ -59,11 +65,14 @@ class App extends Component {
             .linkDistance(20)
             .charge(-100)
             .nodes(this.state.nodes)
-            .links(this.state.links)
+            .links(l)
             .start(),
         },()=>{
         });
         
+    }
+    collect_data(){
+
     }
     createLinks(linkData, nodes, linkType){
         if(linkData.length === 0) {
@@ -92,9 +101,9 @@ class App extends Component {
         return(
             <svg className="canvas" width="1500" height="960">
                 <defs><Marker/></defs>
-                <Container force={this.state.force} />
+                <Container force={this.state.force} parentRef={this.state.container} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom} collect_data={this.collect_data} />
                 <Legend legendInfo={this.state.legendInfo} />
-                <Slider/>
+                <Slider force={this.state.force} container={this.state.container} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom}/>
                 {this.state.modal_open}?<Modal/>:{null};
             </svg>
         )

@@ -1,7 +1,6 @@
 import React from 'react';
 import {useD3} from '../hooks/useD3.js';
 const Marker = ()=>{
-    console.log("marker");
     const ref = useD3((marker)=>{
         marker.attr("id", "arrow-head")
         .attr("viewBox", "0 -5 10 10")
