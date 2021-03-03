@@ -40,7 +40,7 @@ class App extends Component {
         this.setState({
             links:l
         },()=>{
-            console.log(this.state.links);
+           // console.log(this.state.links);
         });
         
         this.setState({ 
@@ -59,9 +59,11 @@ class App extends Component {
             .linkDistance(20)
             .charge(-100)
             .nodes(this.state.nodes)
-            .links(this.state.links)
+            .links(l)
             .start(),
         },()=>{
+        //console.log(this.state.links)
+        //console.log(this.state.force.links())
         });
         
     }
@@ -92,7 +94,7 @@ class App extends Component {
         return(
             <svg className="canvas" width="1500" height="960">
                 <defs><Marker/></defs>
-                <Container force={this.state.force} />
+                <Container force={this.state.force} canvas={this.state.canvas}/>
                 <Legend legendInfo={this.state.legendInfo} />
                 <Slider/>
                 {this.state.modal_open}?<Modal/>:{null};
