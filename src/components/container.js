@@ -4,10 +4,8 @@ import * as d3 from 'd3';
 import _ from 'underscore';
 var modal_open=false;
 const Container = ({force,canvas})=>{
-    //console.log(force);
     const ref = useD3((container)=>{
         force.on('tick',tick);
-       // console.log(force.links())
         var link = container.selectAll(".link")
         .data(force.links())
         .enter()
@@ -16,7 +14,6 @@ const Container = ({force,canvas})=>{
         .attr("stroke", "black")
         .style("stroke-width", 1)
         .attr("stroke-dasharray", function(d) {
-        	//console.log(d.linkType)
           if(d.linkType === 'associationPair') {
               return "0.9";
           }
