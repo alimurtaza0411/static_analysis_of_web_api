@@ -1,11 +1,8 @@
 import React from 'react';
 import { useD3 } from '../hooks/useD3';
-import * as d3 from 'd3';
-import _ from 'underscore';
-var modal_open=false;
-const Container = ({force,canvas})=>{
-    //console.log(force);
-    const ref = useD3((container)=>{
+
+const Container = ({canvas,zoom,noZoom,collect_data,force,parentRef})=>{
+    parentRef = useD3((container)=>{
         force.on('tick',tick);
        // console.log(force.links())
         var link = container.selectAll(".link")
@@ -37,14 +34,24 @@ const Container = ({force,canvas})=>{
             .enter()
             .append("g")
             .attr("class", "node-container")
+            .on("mousedown",
+            function(d) {
+                canvas.call(noZoom);
+            })
+            .on("mouseup",
+            function() {
+                canvas.call(zoom);
+            })
+            .on("dblclick", collect_data)
             .call(force.drag);
-            node
+        
+        node
             .append("circle")
             .attr("r", 6)
             .attr("class", "node")
             .attr("opacity", 0.75);
         
-          node
+        node
             .append("text")
             .attr("x", 12)
             .attr("dy", ".35em")
@@ -63,9 +70,8 @@ const Container = ({force,canvas})=>{
                   function(d) { return "translate(" + d.x + "," +  d.y + ")"; });
               }
               });
-           
     return(
-        <g className="force-container" ref={ref}></g>
+        <g className="force-container" ref={parentRef}></g>
     );
 }
 export default Container;

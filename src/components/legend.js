@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { useD3 } from '../hooks/useD3';
 const Legend = ({legendInfo})=>{
     const ref = useD3((legendContainer)=>{
