@@ -1,7 +1,7 @@
 import React, {Component,createRef} from 'react';
 import ReactDOM from 'react-dom';
 import * as d3 from'd3';
-import './style/styles.css';
+import './styles/style.css';
 import {entities,associationPair,optionalExclusiveContainmentPair,exclusiveContainmentPair,weakInclusiveContainmentPair,strongInclusiveContainmentPair} from './data/OpenShip1.json';
 import Marker from './components/marker.js';
 import Container from './components/container.js';
@@ -88,10 +88,8 @@ class App extends Component {
     }
     getNodeIndex(nodes,nodeName){
         var index =  null;
-        var instances = 0;
         nodes.map((node, i) => {
             if(node.name === nodeName) {
-                instances++;
                 index = i;
             }
         });
