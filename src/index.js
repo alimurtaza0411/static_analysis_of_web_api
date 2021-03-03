@@ -47,6 +47,7 @@ class App extends Component {
         this.setState({
             links:l
         },()=>{
+
         });
         
         this.setState({ 
@@ -68,6 +69,8 @@ class App extends Component {
             .links(l)
             .start(),
         },()=>{
+        //console.log(this.state.links)
+        //console.log(this.state.force.links())
         });
         
     }
