@@ -6,6 +6,7 @@ const Container = ({canvas,zoom,noZoom,collect_data,force,parentRef})=>{
     const contain = useD3((container)=>{
         force.on('tick',tick);
         link = container.selectAll(".link")
+
         .data(force.links())
         .enter()
         .append("line")
@@ -13,7 +14,6 @@ const Container = ({canvas,zoom,noZoom,collect_data,force,parentRef})=>{
         .attr("stroke", "black")
         .style("stroke-width", 1)
         .attr("stroke-dasharray", function(d) {
-        	//console.log(d.linkType)
           if(d.linkType === 'associationPair') {
               return "0.9";
           }
