@@ -6,7 +6,6 @@ import {entities,associationPair,optionalExclusiveContainmentPair,exclusiveConta
 import Marker from './components/marker.js';
 import Container from './components/container.js';
 import Legend from './components/legend.js';
-import Slider from './components/slider.js';
 import Modal from './components/modal.js';
 class App extends Component {
     constructor(props){
@@ -101,7 +100,6 @@ class App extends Component {
                 <defs><Marker/></defs>
                 <Container force={this.state.force} parentRef={this.state.container} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom} collect_data={this.collect_data} />
                 <Legend legendInfo={this.state.legendInfo} />
-                <Slider force={this.state.force} container={this.state.container} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom}/>
                 {this.state.modal_open}?<Modal/>:{null};
             </svg>
         )
