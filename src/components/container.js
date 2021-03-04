@@ -13,6 +13,7 @@ const Container = ({canvas,zoom,noZoom,collect_data,force,parentRef})=>{
         .attr("stroke", "black")
         .style("stroke-width", 1)
         .attr("stroke-dasharray", function(d) {
+        	//console.log(d.linkType)
           if(d.linkType === 'associationPair') {
               return "0.9";
           }
@@ -57,12 +58,12 @@ const Container = ({canvas,zoom,noZoom,collect_data,force,parentRef})=>{
             .text(function(d) { return d.name; })
             .style("font", "7px sans-serif");
              
-        function tick() {
-            link
-              .attr("x1", function(d) { return d.source.x; })
-              .attr("y1", function(d) { return d.source.y; })
-              .attr("x2", function(d) { return d.target.x; })
-              .attr("y2", function(d) { return d.target.y; });
+           function tick() {
+                link
+                  .attr("x1", function(d) { return d.source.x; })
+                  .attr("y1", function(d) { return d.source.y; })
+                  .attr("x2", function(d) { return d.target.x; })
+                  .attr("y2", function(d) { return d.target.y; });
             
             node
               .attr("transform",
