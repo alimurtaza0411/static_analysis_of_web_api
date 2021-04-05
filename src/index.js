@@ -70,9 +70,6 @@ class App extends Component {
         });
         
     }
-    collect_data(){
-
-    }
     createLinks(linkData, nodes, linkType){
         if(linkData.length === 0) {
             console.log("warning! - No Link data");
@@ -98,7 +95,7 @@ class App extends Component {
         return(
             <svg className="canvas" width="1500" height="960">
                 <defs><Marker/></defs>
-                <Container force={this.state.force} parentRef={this.state.container} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom} collect_data={this.collect_data} />
+                <Container force={this.state.force} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom}  getNodeIndex={this.getNodeIndex} />
                 <Legend legendInfo={this.state.legendInfo} />
                 {this.state.modal_open}?<Modal/>:{null};
             </svg>
