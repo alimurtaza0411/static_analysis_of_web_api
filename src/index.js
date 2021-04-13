@@ -1,11 +1,11 @@
-import React, {Component,useEffect} from 'react';
+import React, {Component,createRef} from 'react';
 import ReactDOM from 'react-dom';
 import * as d3 from'd3';
+import './styles/style.css';
 import {entities,associationPair,optionalExclusiveContainmentPair,exclusiveContainmentPair,weakInclusiveContainmentPair,strongInclusiveContainmentPair} from './data/OpenShip1.json';
 import Marker from './components/marker.js';
 import Container from './components/container.js';
 import Legend from './components/legend.js';
-import Slider from './components/slider.js';
 import Modal from './components/modal.js';
 class App extends Component {
     constructor(props){
@@ -25,9 +25,15 @@ class App extends Component {
             links:[],
             modal_open:false,
             title:"Business Entity Data Model: FedEx OpenShipping Service",
-            nodes:entities
+            nodes:entities,
+            container:createRef(),
+            zoom:d3.behavior.zoom().scaleExtent([1, 1]).on("zoom", this.zoom),
+            noZoom:d3.behavior.zoom().scaleExtent([1,1]).on("zoom", null)
         }  
 
+    }
+    zoom() {
+        this.state.container.attr("transform", "translate(" + d3.event.translate + ")");
     }
     
     componentWillMount(){
@@ -40,7 +46,6 @@ class App extends Component {
         this.setState({
             links:l
         },()=>{
-           // console.log(this.state.links);
         });
         
         this.setState({ 
@@ -62,8 +67,6 @@ class App extends Component {
             .links(l)
             .start(),
         },()=>{
-        //console.log(this.state.links)
-        //console.log(this.state.force.links())
         });
         
     }
@@ -81,10 +84,8 @@ class App extends Component {
     }
     getNodeIndex(nodes,nodeName){
         var index =  null;
-        var instances = 0;
         nodes.map((node, i) => {
             if(node.name === nodeName) {
-                instances++;
                 index = i;
             }
         });
@@ -94,9 +95,8 @@ class App extends Component {
         return(
             <svg className="canvas" width="1500" height="960">
                 <defs><Marker/></defs>
-                <Container force={this.state.force} canvas={this.state.canvas}/>
+                <Container force={this.state.force} canvas={this.state.canvas} zoom={this.state.zoom} noZoom={this.state.noZoom}  getNodeIndex={this.getNodeIndex} />
                 <Legend legendInfo={this.state.legendInfo} />
-                <Slider/>
                 {this.state.modal_open}?<Modal/>:{null};
             </svg>
         )
