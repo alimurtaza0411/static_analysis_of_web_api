@@ -1,0 +1,95 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v8="http://fedex.com/ws/track/v8">
+   <soapenv:Body>
+      <v8:TrackRequest>
+         <v8:WebAuthenticationDetail>
+            <v8:UserCredential>
+               <v8:Key>XAxwdgjPc4kWoPMC</v8:Key>
+               <v8:Password>1iCABDnm7g4aWMTb0x7Q2WqvX</v8:Password>
+            </v8:UserCredential>
+         </v8:WebAuthenticationDetail>
+         <v8:ClientDetail>
+            <v8:AccountNumber>510088000</v8:AccountNumber>
+            <v8:MeterNumber>118576342</v8:MeterNumber>
+            <!--Optional:-->
+            <v8:IntegratorId>gero et</v8:IntegratorId>
+            <!--Optional:-->
+            <v8:Localization>
+               <v8:LanguageCode>EN</v8:LanguageCode>
+               <!--Optional:-->
+               <v8:LocaleCode>sonoras imperio</v8:LocaleCode>
+            </v8:Localization>
+         </v8:ClientDetail>
+         <!--Optional:-->
+         <v8:TransactionDetail>
+            <!--Optional:-->
+            <v8:CustomerTransactionId>quae divum incedo</v8:CustomerTransactionId>
+            <!--Optional:-->
+            <v8:Localization>
+               <v8:LanguageCode>EN</v8:LanguageCode>
+               <!--Optional:-->
+               <v8:LocaleCode>verrantque per auras</v8:LocaleCode>
+            </v8:Localization>
+         </v8:TransactionDetail>
+         <v8:Version>
+            <v8:ServiceId>trck</v8:ServiceId>
+            <v8:Major>8</v8:Major>
+            <v8:Intermediate>0</v8:Intermediate>
+            <v8:Minor>0</v8:Minor>
+         </v8:Version>
+         <!--Zero or more repetitions:-->
+         <v8:SelectionDetails>
+            <!--Optional:-->
+            <v8:CarrierCode>FXFR</v8:CarrierCode>
+            <!--Optional:-->
+            <v8:OperatingCompany>FEDEX_CUSTOM_CRITICAL</v8:OperatingCompany>
+            <!--Optional:-->
+            <v8:PackageIdentifier>
+               <v8:Type>RETURNED_TO_SHIPPER_TRACKING_NUMBER</v8:Type>
+               <v8:Value>regemque dedit</v8:Value>
+            </v8:PackageIdentifier>
+            <!--Optional:-->
+            <v8:TrackingNumberUniqueIdentifier>fremunt celsa</v8:TrackingNumberUniqueIdentifier>
+            <!--Optional:-->
+            <v8:ShipDateRangeBegin>2012-09-13+10:00</v8:ShipDateRangeBegin>
+            <!--Optional:-->
+            <v8:ShipDateRangeEnd>2009-10-14</v8:ShipDateRangeEnd>
+            <!--Optional:-->
+            <v8:ShipmentAccountNumber>flammato secum dea</v8:ShipmentAccountNumber>
+            <!--Optional:-->
+            <v8:SecureSpodAccount>profundum quippe ferant</v8:SecureSpodAccount>
+            <!--Optional:-->
+            <v8:Destination>
+               <!--Zero or more repetitions:-->
+               <v8:StreetLines>nubibus ignem disiecitque</v8:StreetLines>
+               <!--Optional:-->
+               <v8:City>ac vinclis et</v8:City>
+               <!--Optional:-->
+               <v8:StateOrProvinceCode>rapidum iaculata e</v8:StateOrProvinceCode>
+               <!--Optional:-->
+               <v8:PostalCode>caelumque profundum</v8:PostalCode>
+               <!--Optional:-->
+               <v8:UrbanizationCode>circum claustra</v8:UrbanizationCode>
+               <!--Optional:-->
+               <v8:CountryCode>coniunx una</v8:CountryCode>
+               <!--Optional:-->
+               <v8:CountryName>arce sceptra</v8:CountryName>
+               <!--Optional:-->
+               <v8:Residential>false</v8:Residential>
+            </v8:Destination>
+            <!--Optional:-->
+            <v8:PagingDetail>
+               <!--Optional:-->
+               <v8:PagingToken>imperio premit</v8:PagingToken>
+               <!--Optional:-->
+               <v8:NumberOfResultsPerPage>200</v8:NumberOfResultsPerPage>
+            </v8:PagingDetail>
+            <!--Optional:-->
+            <v8:CustomerSpecifiedTimeOutValueInMilliseconds>200</v8:CustomerSpecifiedTimeOutValueInMilliseconds>
+         </v8:SelectionDetails>
+         <!--Optional:-->
+         <v8:TransactionTimeOutValueInMilliseconds>200</v8:TransactionTimeOutValueInMilliseconds>
+         <!--Zero or more repetitions:-->
+         <v8:ProcessingOptions>INCLUDE_DETAILED_SCANS</v8:ProcessingOptions>
+      </v8:TrackRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

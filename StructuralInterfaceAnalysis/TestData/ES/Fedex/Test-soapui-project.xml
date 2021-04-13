@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v7="http://fedex.com/ws/openship/v7">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v7:CreateOpenShipmentRequest>
+         <v7:WebAuthenticationDetail>
+            <v7:UserCredential>
+               <v7:Key>XAxwdgjPc4kWoPMC</v7:Key>
+               <v7:Password>1iCABDnm7g4aWMTb0x7Q2WqvX</v7:Password>
+            </v7:UserCredential>
+         </v7:WebAuthenticationDetail>
+         <v7:ClientDetail>
+            <v7:AccountNumber>510088000</v7:AccountNumber>
+            <v7:MeterNumber>118576342</v7:MeterNumber>
+            <v7:Localization>
+               <v7:LanguageCode>EN</v7:LanguageCode>
+               <v7:LocaleCode>us</v7:LocaleCode>
+            </v7:Localization>
+         </v7:ClientDetail>
+         <v7:TransactionDetail>
+            <v7:CustomerTransactionId>CreateOpenShipmentRequest_v7</v7:CustomerTransactionId>
+            <v7:Localization>
+               <v7:LanguageCode>EN</v7:LanguageCode>
+               <v7:LocaleCode>us</v7:LocaleCode>
+            </v7:Localization>
+         </v7:TransactionDetail>
+         <v7:Version>
+            <v7:ServiceId>ship</v7:ServiceId>
+            <v7:Major>7</v7:Major>
+            <v7:Intermediate>0</v7:Intermediate>
+            <v7:Minor>0</v7:Minor>
+         </v7:Version>
+         <v7:Index>Input Your Information</v7:Index>
+         <v7:RequestedShipment>
+            <v7:ShipTimestamp>2014-05-23T09:30:47-05:00</v7:ShipTimestamp>
+            <v7:DropoffType>REGULAR_PICKUP</v7:DropoffType>
+            <v7:ServiceType>INTERNATIONAL_PRIORITY</v7:ServiceType>
+            <v7:PackagingType>YOUR_PACKAGING</v7:PackagingType>
+            <v7:TotalWeight>
+               <v7:Units>LB</v7:Units>
+               <v7:Value>30.00</v7:Value>
+            </v7:TotalWeight>
+            <v7:Shipper>
+               <v7:AccountNumber>Input Your Information</v7:AccountNumber>
+               <v7:Contact>
+                  <v7:PersonName>Input Your Information</v7:PersonName>
+                  <v7:CompanyName>Input Your Information</v7:CompanyName>
+                  <v7:PhoneNumber>Input Your Information</v7:PhoneNumber>
+                  <v7:EMailAddress>Input Your Information</v7:EMailAddress>
+               </v7:Contact>
+               <v7:Address>
+                  <v7:StreetLines>Input Your Information</v7:StreetLines>
+                  <v7:City>Memphis</v7:City>
+                  <v7:StateOrProvinceCode>TN</v7:StateOrProvinceCode>
+                  <v7:PostalCode>38118</v7:PostalCode>
+                  <v7:CountryCode>US</v7:CountryCode>
+               </v7:Address>
+            </v7:Shipper>
+            <v7:Recipient>
+               <v7:AccountNumber>Input Your Information</v7:AccountNumber>
+               <v7:Contact>
+                  <v7:PersonName>Input Your Information</v7:PersonName>
+                  <v7:CompanyName>Input Your Information</v7:CompanyName>
+                  <v7:PhoneNumber>Input Your Information</v7:PhoneNumber>
+                  <v7:EMailAddress>Input Your Information</v7:EMailAddress>
+               </v7:Contact>
+               <v7:Address>
+                  <v7:StreetLines>Input Your Information</v7:StreetLines>
+                  <v7:City>Richmond</v7:City>
+                  <v7:StateOrProvinceCode>BC</v7:StateOrProvinceCode>
+                  <v7:PostalCode>V7C4v5</v7:PostalCode>
+                  <v7:CountryCode>CA</v7:CountryCode>
+               </v7:Address>
+            </v7:Recipient>
+            <v7:ShippingChargesPayment>
+               <v7:PaymentType>SENDER</v7:PaymentType>
+               <v7:Payor>
+                  <v7:ResponsibleParty>
+                     <v7:AccountNumber>Input Your Information</v7:AccountNumber>
+                     <v7:Contact>
+                        <v7:PersonName>Input Your Information</v7:PersonName>
+                        <v7:CompanyName>Input Your Information</v7:CompanyName>
+                        <v7:PhoneNumber>Input Your Information</v7:PhoneNumber>
+                        <v7:EMailAddress>Input Your Information</v7:EMailAddress>
+                     </v7:Contact>
+                     <v7:Address>
+                        <v7:StreetLines>Input Your Information</v7:StreetLines>
+                        <v7:City>Memphis</v7:City>
+                        <v7:StateOrProvinceCode>TN</v7:StateOrProvinceCode>
+                        <v7:PostalCode>38118</v7:PostalCode>
+                        <v7:CountryCode>US</v7:CountryCode>
+                     </v7:Address>
+                  </v7:ResponsibleParty>
+               </v7:Payor>
+            </v7:ShippingChargesPayment>
+            <v7:CustomsClearanceDetail>
+               <v7:DutiesPayment>
+                  <v7:PaymentType>SENDER</v7:PaymentType>
+                  <v7:Payor>
+                     <v7:ResponsibleParty>
+                        <v7:AccountNumber>Input Your Information</v7:AccountNumber>
+                        <v7:Contact>
+                           <v7:PersonName>Input Your Information</v7:PersonName>
+                           <v7:CompanyName>Input Your Information</v7:CompanyName>
+                           <v7:PhoneNumber>Input Your Information</v7:PhoneNumber>
+                           <v7:EMailAddress>Input Your Information</v7:EMailAddress>
+                        </v7:Contact>
+                        <v7:Address>
+                           <v7:StreetLines>Input Your Information</v7:StreetLines>
+                           <v7:City>Memphis</v7:City>
+                           <v7:StateOrProvinceCode>TN</v7:StateOrProvinceCode>
+                           <v7:PostalCode>38118</v7:PostalCode>
+                           <v7:CountryCode>US</v7:CountryCode>
+                        </v7:Address>
+                     </v7:ResponsibleParty>
+                  </v7:Payor>
+               </v7:DutiesPayment>
+               <v7:DocumentContent>NON_DOCUMENTS</v7:DocumentContent>
+               <v7:CustomsValue>
+                  <v7:Currency>USD</v7:Currency>
+                  <v7:Amount>2500.000000</v7:Amount>
+               </v7:CustomsValue>
+               <v7:CommercialInvoice>
+                  <v7:TermsOfSale>DAP</v7:TermsOfSale>
+               </v7:CommercialInvoice>
+               <v7:Commodities>
+                  <v7:NumberOfPieces>1</v7:NumberOfPieces>
+                  <v7:Description>sdf</v7:Description>
+                  <v7:CountryOfManufacture>US</v7:CountryOfManufacture>
+                  <v7:Weight>
+                     <v7:Units>LB</v7:Units>
+                     <v7:Value>20.22</v7:Value>
+                  </v7:Weight>
+                  <v7:Quantity>1</v7:Quantity>
+                  <v7:QuantityUnits>cm</v7:QuantityUnits>
+                  <v7:UnitPrice>
+                     <v7:Currency>USD</v7:Currency>
+                     <v7:Amount>45</v7:Amount>
+                  </v7:UnitPrice>
+                  <v7:CustomsValue>
+                     <v7:Currency>USD</v7:Currency>
+                     <v7:Amount>2500.000000</v7:Amount>
+                  </v7:CustomsValue>
+               </v7:Commodities>
+            </v7:CustomsClearanceDetail>
+            <v7:LabelSpecification>
+               <v7:Dispositions>
+                  <v7:DispositionType>STORED</v7:DispositionType>
+               </v7:Dispositions>
+               <v7:LabelFormatType>COMMON2D</v7:LabelFormatType>
+               <v7:ImageType>PNG</v7:ImageType>
+               <v7:LabelStockType>PAPER_4X6</v7:LabelStockType>
+               <v7:LabelPrintingOrientation>TOP_EDGE_OF_TEXT_FIRST</v7:LabelPrintingOrientation>
+            </v7:LabelSpecification>
+            <v7:RateRequestTypes>LIST</v7:RateRequestTypes>
+            <v7:PackageCount>5</v7:PackageCount>
+            <v7:RequestedPackageLineItems>
+               <v7:SequenceNumber>1</v7:SequenceNumber>
+               <v7:Weight>
+                  <v7:Units>LB</v7:Units>
+                  <v7:Value>50</v7:Value>
+               </v7:Weight>
+               <v7:Dimensions>
+                  <v7:Length>11</v7:Length>
+                  <v7:Width>11</v7:Width>
+                  <v7:Height>11</v7:Height>
+                  <v7:Units>IN</v7:Units>
+               </v7:Dimensions>
+               <v7:PhysicalPackaging>BAG</v7:PhysicalPackaging>
+               <v7:ItemDescription>BAG</v7:ItemDescription>
+               <v7:ContentRecords>
+                  <v7:PartNumber>1</v7:PartNumber>
+                  <v7:ItemNumber>1</v7:ItemNumber>
+                  <v7:ReceivedQuantity>1</v7:ReceivedQuantity>
+                  <v7:Description>BAG</v7:Description>
+               </v7:ContentRecords>
+            </v7:RequestedPackageLineItems>
+            <v7:RequestedPackageLineItems>
+               <v7:SequenceNumber>2</v7:SequenceNumber>
+               <v7:Weight>
+                  <v7:Units>LB</v7:Units>
+                  <v7:Value>50</v7:Value>
+               </v7:Weight>
+               <v7:Dimensions>
+                  <v7:Length>11</v7:Length>
+                  <v7:Width>11</v7:Width>
+                  <v7:Height>11</v7:Height>
+                  <v7:Units>IN</v7:Units>
+               </v7:Dimensions>
+               <v7:PhysicalPackaging>BAG</v7:PhysicalPackaging>
+               <v7:ItemDescription>BAG</v7:ItemDescription>
+               <v7:ContentRecords>
+                  <v7:PartNumber>1</v7:PartNumber>
+                  <v7:ItemNumber>1</v7:ItemNumber>
+                  <v7:ReceivedQuantity>1</v7:ReceivedQuantity>
+                  <v7:Description>BAG</v7:Description>
+               </v7:ContentRecords>
+            </v7:RequestedPackageLineItems>
+            <v7:RequestedPackageLineItems>
+               <v7:SequenceNumber>3</v7:SequenceNumber>
+               <v7:Weight>
+                  <v7:Units>LB</v7:Units>
+                  <v7:Value>50</v7:Value>
+               </v7:Weight>
+               <v7:Dimensions>
+                  <v7:Length>11</v7:Length>
+                  <v7:Width>11</v7:Width>
+                  <v7:Height>11</v7:Height>
+                  <v7:Units>IN</v7:Units>
+               </v7:Dimensions>
+               <v7:PhysicalPackaging>BAG</v7:PhysicalPackaging>
+               <v7:ItemDescription>BAG</v7:ItemDescription>
+               <v7:ContentRecords>
+                  <v7:PartNumber>1</v7:PartNumber>
+                  <v7:ItemNumber>1</v7:ItemNumber>
+                  <v7:ReceivedQuantity>1</v7:ReceivedQuantity>
+                  <v7:Description>BAG</v7:Description>
+               </v7:ContentRecords>
+            </v7:RequestedPackageLineItems>
+            <v7:RequestedPackageLineItems>
+               <v7:SequenceNumber>4</v7:SequenceNumber>
+               <v7:Weight>
+                  <v7:Units>LB</v7:Units>
+                  <v7:Value>50</v7:Value>
+               </v7:Weight>
+               <v7:Dimensions>
+                  <v7:Length>11</v7:Length>
+                  <v7:Width>11</v7:Width>
+                  <v7:Height>11</v7:Height>
+                  <v7:Units>IN</v7:Units>
+               </v7:Dimensions>
+               <v7:PhysicalPackaging>BAG</v7:PhysicalPackaging>
+               <v7:ItemDescription>BAG</v7:ItemDescription>
+               <v7:ContentRecords>
+                  <v7:PartNumber>1</v7:PartNumber>
+                  <v7:ItemNumber>1</v7:ItemNumber>
+                  <v7:ReceivedQuantity>1</v7:ReceivedQuantity>
+                  <v7:Description>BAG</v7:Description>
+               </v7:ContentRecords>
+            </v7:RequestedPackageLineItems>
+            <v7:RequestedPackageLineItems>
+               <v7:SequenceNumber>5</v7:SequenceNumber>
+               <v7:Weight>
+                  <v7:Units>LB</v7:Units>
+                  <v7:Value>50</v7:Value>
+               </v7:Weight>
+               <v7:Dimensions>
+                  <v7:Length>11</v7:Length>
+                  <v7:Width>11</v7:Width>
+                  <v7:Height>11</v7:Height>
+                  <v7:Units>IN</v7:Units>
+               </v7:Dimensions>
+               <v7:PhysicalPackaging>BAG</v7:PhysicalPackaging>
+               <v7:ItemDescription>BAG</v7:ItemDescription>
+               <v7:ContentRecords>
+                  <v7:PartNumber>1</v7:PartNumber>
+                  <v7:ItemNumber>1</v7:ItemNumber>
+                  <v7:ReceivedQuantity>1</v7:ReceivedQuantity>
+                  <v7:Description>BAG</v7:Description>
+               </v7:ContentRecords>
+            </v7:RequestedPackageLineItems>
+         </v7:RequestedShipment>
+      </v7:CreateOpenShipmentRequest>   
+   </soapenv:Body>
+</soapenv:Envelope>
