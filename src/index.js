@@ -2,7 +2,7 @@ import React, {Component,createRef} from 'react';
 import ReactDOM from 'react-dom';
 import * as d3 from'd3';
 import './styles/style.css';
-import {entities,associationPair,optionalExclusiveContainmentPair,exclusiveContainmentPair,weakInclusiveContainmentPair,strongInclusiveContainmentPair} from './data/OpenShip1.json';
+import {entities,associationPair,optionalExclusiveContainmentPair,exclusiveContainmentPair,weakInclusiveContainmentPair,strongInclusiveContainmentPair} from './data/data.json';
 import Marker from './components/marker.js';
 import Container from './components/container.js';
 import Legend from './components/legend.js';
